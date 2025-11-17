@@ -1,12 +1,12 @@
 # Best Practices Guides
 
-This directory contains best practices guides for Claude Code features and patterns used in Product-Toolkit.
+This directory contains best practices guides for Cursor features and patterns used in Product-Toolkit.
 
 ---
 
 ## Available Guides
 
-### Claude Code Plugins Development
+### Cursor Plugins Development
 - **CLAUDE_CODE_PLUGINS.md** - Comprehensive analysis (844 lines)
   - Complete directory structures
   - Plugin metadata specifications

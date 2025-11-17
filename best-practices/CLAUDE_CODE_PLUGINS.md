@@ -1,4 +1,4 @@
-# Claude Code Plugins - Comprehensive Analysis
+# Cursor Plugins - Comprehensive Analysis
 
 *Findings from github.com/anthropics/claude-code repository*
 
@@ -76,7 +76,7 @@ plugin-name/
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-code-plugins",
   "version": "1.0.0",
-  "description": "Bundled plugins for Claude Code",
+  "description": "Bundled plugins for Cursor",
   "owner": {
     "name": "Anthropic",
     "email": "support@anthropic.com"
@@ -832,7 +832,7 @@ plugins/plugin-name/
 
 ## CONCLUSION
 
-The Claude Code plugin system is:
+The Cursor plugin system is:
 - **Flexible**: Mix and match commands, agents, hooks as needed
 - **Simple**: YAML front matter + Markdown = easy to understand
 - **Composable**: Agents are reusable across commands/workflows

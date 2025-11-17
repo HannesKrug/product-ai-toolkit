@@ -1,12 +1,12 @@
 # Product-Toolkit
 
-**AI-Powered Product Management Assistant for Claude Code**
+**AI-Powered Product Management Assistant for Cursor**
 
 *Created by the **Product Brothers** - [Hendrik Hemken](https://linkedin.com/in/hendrikhemken) & [Sören von Sebelin](https://linkedin.com/in/soeren-von-sebelin)*
 
 ---
 
-A lean, Claude Code-based toolkit that helps Product Managers with their daily work:
+A lean, Cursor-based toolkit that helps Product Managers with their daily work:
 - Create OKRs (with best practices from Wodtke + Klau)
 - Write PRDs in Confluence with Jira Epic linking
 - Break down EPICs into User Stories
@@ -22,7 +22,7 @@ A lean, Claude Code-based toolkit that helps Product Managers with their daily w
 
 **1. Prerequisites**
 
-- [Claude Code](https://docs.claude.com/en/docs/claude-code) installed
+- [Cursor](https://www.cursor.com/) installed
 - MCP Servers configured (Confluence, Jira - optional but recommended)
 
 **2. Setup**
@@ -32,15 +32,15 @@ A lean, Claude Code-based toolkit that helps Product Managers with their daily w
 git clone https://github.com/hendrikhemken/product-ai-toolkit.git
 cd product-ai-toolkit
 
-# Open in Claude Code
-claude
+# Open in Cursor
+cursor .
 
-# On first session, Claude will auto-detect and guide you
+# On first session, Cursor will auto-detect and guide you
 # through context setup (5 min interactive questionnaire)
 ```
 
 **Alternative (Skip Setup):**
-If you prefer to dive right in, just run `claude` - you can set up context later by saying "Setup my context".
+If you prefer to dive right in, open the repo in Cursor anytime — you can set up context later by saying "Setup my context".
 
 **3. Start Using**
 
@@ -80,8 +80,8 @@ The toolkit activates automatically when you mention relevant keywords:
 ### 🔧 Productivity Tools
 - **Context setup** - Interactive company/product/team context collection
 - **Jira comment digest** - Summarize ticket discussions & ongoing threads
-- **Skill creator** - Meta-skill for building custom Claude Code skills
-- **Hook creator** - Create Claude Code hooks for tool control & automation
+- **Skill creator** - Meta-skill for building custom Cursor skills
+- **Hook creator** - Create Cursor hooks for tool control & automation
 
 ---
 
@@ -96,7 +96,7 @@ The toolkit integrates with Confluence (PRDs) and Jira (User Stories) via the `m
 **Setup:**
 1. Follow [MCP Docker installation guide](https://github.com/QuantGeekDev/mcp-atlassian)
 2. Configure with your Atlassian credentials
-3. Restart Claude Code
+3. Restart Cursor
 
 **What you get:**
 - ✅ Create PRDs directly in Confluence
@@ -139,7 +139,7 @@ This toolkit teaches best practices from industry leaders:
 This toolkit is **free & open source** - use it however you want!
 
 **Want personalized setup for your team?**
-- Claude Code workshops for PMs
+- Cursor workshops for PMs
 - MCP Server configuration & debugging
 - Custom skill development for your workflows
 - Team-specific adaptation (Startup vs Corporate)
@@ -154,7 +154,7 @@ This toolkit is **free & open source** - use it however you want!
 ```
 product-ai-toolkit/
 ├── README.md                    # You are here
-├── CLAUDE.md                    # Main instructions for Claude Code
+├── CLAUDE.md                    # Main instructions for Cursor
 ├── LICENSE                      # MIT License
 ├── .gitignore                   # Protects your personal data
 ├── .claude-plugin/              # Plugin manifests for distribution
@@ -171,8 +171,8 @@ product-ai-toolkit/
 │       ├── interview-analysis/  # Research synthesis & insight extraction
 │       ├── jira-comment-digest/ # Jira comment thread summarization
 │       ├── user-context/        # Interactive context setup
-│       ├── skill-creator/       # Create new Claude Code skills
-│       └── hook-creator/        # Create Claude Code hooks
+│       ├── skill-creator/       # Create new Cursor skills
+│       └── hook-creator/        # Create Cursor hooks
 ├── user_context/
 │   ├── COMPANY_CONTEXT.template.md  # Template for setup (reference)
 │   ├── COMPANY_CONTEXT.md           # Your personalized context (gitignored)
@@ -207,14 +207,14 @@ product-ai-toolkit/
 ```
 You: "Let's create my Q4 2025 OKRs"
 
-Claude: "Cool! I see you're a Solo Consultant (from COMPANY_CONTEXT).
+Cursor: "Cool! I see you're a Solo Consultant (from COMPANY_CONTEXT).
          I'll use Wodtke's Weekly Rhythm approach.
 
          What's your North Star for Q4?"
 
 You: "Sign 3 retainer clients at €3K/month MRR"
 
-Claude: "Nice! Let me draft an Objective + Key Results...
+Cursor: "Nice! Let me draft an Objective + Key Results...
 
          [drafts OKR]
 
@@ -223,7 +223,7 @@ Claude: "Nice! Let me draft an Objective + Key Results...
 
 You: "Good catch! Yes, add that."
 
-Claude: "✅ Updated. Confidence level 5/10?
+Cursor: "✅ Updated. Confidence level 5/10?
          I'll create the file at /outputs/okrs/Q4-2025-OKRs.md
          and set up your weekly Monday/Friday check-ins."
 ```
@@ -259,7 +259,7 @@ See [LICENSE](LICENSE) for details.
 ## 🙏 Acknowledgments
 
 Built with:
-- [Claude Code](https://claude.com/claude-code) by Anthropic
+- [Cursor](https://claude.com/claude-code) by Anthropic
 - [MCP Servers](https://docs.claude.com/en/docs/build-with-claude/mcp) for Confluence, Jira, Figma integration
 - Wisdom from Wodtke, Klau, Cagan, Cohn & the PM community
 

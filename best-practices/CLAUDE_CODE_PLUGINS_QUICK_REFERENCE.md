@@ -1,4 +1,4 @@
-# Claude Code Plugins - Quick Reference Guide
+# Cursor Plugins - Quick Reference Guide
 
 *Fast lookup for plugin development patterns*
 

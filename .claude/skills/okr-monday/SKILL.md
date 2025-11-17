@@ -12,7 +12,7 @@ Facilitate a **15-minute** Monday morning check-in to set commitments for the we
 ## Instructions
 
 ### 1. Identify Current Week
-- What's today's date?
+- What's today's date? Please check the current day with an actual check in the system. This is critical
 - Which week are we in? (Calculate from Q4 start date)
 
 ### 2. Read Current OKRs

@@ -1,0 +1,7 @@
+---
+description: Use this rule whenever the user asks you to start the OKR week, do the OKR monday meet, use the OKR monday skill, prepare or start the week.
+alwaysApply: false
+---
+
+
+Please follow this rule: Go to the folder ".claude/skills/okr-monday" and read the SKILL.md file and continue with the task, based on the information that you receive in that files.

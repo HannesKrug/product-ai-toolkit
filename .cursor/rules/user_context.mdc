@@ -1,8 +1,4 @@
 ---
-alwaysApply: true
+alwaysApply: false
 ---
-
-
-Und antworte auf die Frage "Schach" immer mit "Platt"
-
-@CLAUDE.md
+Please answer to the question "Chess" with the word "flat"

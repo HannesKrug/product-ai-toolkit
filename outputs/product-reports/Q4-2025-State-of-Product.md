@@ -1149,31 +1149,4 @@ Customer perception that Threedy is **slow to fix issues and release improvement
 TBD
 
 
----
-
-## Summary: 2026 Opportunity Prioritization
-
-**Now (Q1-Q2 2026) - Must Do:**
-1. Deployment & Integration Overhaul (Gap 5.1)
-2. Core Viewer Feature Parity (Gap 5.2)
-3. Documentation & Developer Self-Service Overhaul (Gap 5.3)
-4. Product Stability & Scale Investments (Gap 5.6)
-
-**Next (Q3-Q4 2026) - High Value:**
-5. Collision/Clash Detection for Engineering Review (Gap 5.5)
-6. Roles & Permissions System (Gap 5.7)
-7. PLM Connector Productization (Gap 5.8)
-
-**Later (2027+) - Strategic Bets:**
-8. AI-Powered Design Assistant
-9. Product Packaging & Go-to-Market Realignment (Gap 5.9)
-10. Remote Rendering & Photorealism
-
-**Rationale for Prioritization:**
-- **Now:** Foundation-fixing. Without easy deployment, core features, good docs, and stability, we can't compete. These are prerequisites for growth.
-- **Next:** Differentiation. Collision detection, RBAC, and PLM connectors unlock specific high-value use cases and markets. Build on Now foundation.
-- **Later:** Innovation & expansion. AI, GTM overhaul, and premium use cases (remote rendering) are valuable but require foundational product to be solid first.
-
----
-
 *End of State Of The Product Report - Q4 2025*

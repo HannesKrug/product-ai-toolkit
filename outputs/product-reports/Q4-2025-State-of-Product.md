@@ -553,6 +553,24 @@ Current role management in 3DSpaces is **too basic ("sticker" roles with no back
 
 *The gaps that most limit adoption, retention, and expansion—prioritized by business impact and strategic alignment.*
 
+### Overview: The 7 Critical Product Gaps
+
+Based on comprehensive Internal and Customer Advisory Board feedback, we've identified 7 prioritized product gaps that are blocking growth in 2026. These gaps cluster into three categories: **Onboarding & Integration** (getting customers live), **Core Product Quality** (trust and feature parity), and **Enterprise Readiness** (scale and security).
+
+| # | Gap | Personas Affected | Priority | Impact |
+|---|-----|-------------------|----------|--------|
+| **5.1** | **Integration & Deployment Complexity** | Integrators/Operators | 🔴 **HIGH** | Blocks every new customer onboarding, delays revenue, competitive disadvantage |
+| **5.2** | **Missing Core Viewer Features** | End Users (Engineers, Designers) | 🔴 **HIGH** | End Users stick with legacy tools, fragile adoption, lost productivity claims |
+| **5.3** | **Documentation & Developer Self-Service** | Developers | 🔴 **HIGH** | Extended time-to-value, support overhead, BRIX ecosystem blocker |
+| **5.4** | **Native CAD Data Fidelity & Quality** | End Users (Engineers, Designers) | 🔴 **HIGH** | Trust erosion, can't use for critical engineering decisions, expansion blocked |
+| **5.5** | **Collision/Clash Detection** | End Users (Engineers) | 🟡 **MEDIUM** | Lost deals, competitive gap vs. CoLab, misaligned with Engineering Review focus |
+| **5.6** | **Product Stability at Enterprise Scale** | All Personas | 🟡 **MEDIUM** | Churn risk, operational fear, use case limitations (Porsche can't use full models) |
+| **5.7** | **Roles & Permissions System** | Integrators/Operators | 🟡 **MEDIUM** | Limits external collaboration use cases, blocks packaged solutions |
+
+**Pattern:** The four 🔴 **HIGH** priority gaps (5.1-5.4) represent **table-stakes capabilities** that customers expect but we're not consistently delivering. These block adoption, trust, and expansion. The three 🟡 **MEDIUM** priority gaps (5.5-5.7) represent **competitive differentiators and enterprise requirements** that limit our addressable market and use case expansion.
+
+**2026 Imperative:** Address all four HIGH priority gaps to convert fragile platform potential into defensible market position. Start with Gap 5.1 (Integration & Deployment) as it affects every new customer.
+
 ---
 
 ### 5.1 Gap: Integration & Deployment Complexity

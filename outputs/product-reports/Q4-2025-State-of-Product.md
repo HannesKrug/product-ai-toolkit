@@ -61,27 +61,7 @@ TBD
 
 ### Our Go-to-Market Approach
 
-**Entry Strategy: Use Case Excellence**
-
-We win deals by solving specific industrial workflows exceptionally well—Engineering Review, Technical Documentation, Design Collaboration. Customers buy outcomes, not platforms. Our initial positioning focuses on end user value (engineers working faster, collaborating better) and Innovation Leader outcomes (velocity, integration confidence, measurable ROI).
-
-**Why This Matters:** Customer feedback is clear—*"Selling a platform and always losing out against apps"* (Timm, CS) and *"Produktansprache statt 'Lösungs'-Spektrum"* (VP Sales). Use case-first positioning addresses this: we're not asking buyers to "imagine what you could build on a platform," we're delivering concrete solutions to known problems.
-
-**Expansion Strategy: Platform Scalability Reveal**
-
-Post-first-success, customers discover the platform advantage: rapid deployment of additional 3D use cases using the same infrastructure. A customer who starts with Engineering Review can add Technical Documentation in weeks (not months) because the CAD integration, authentication, viewer infrastructure, and data processing are already in place. This scalability—enabled by our API-first architecture—drives compounding ROI and reduces vendor sprawl.
-
-**Why This Matters:** This is where "developer platform" positioning emerges naturally. After proving value with use case #1, Customer Success reveals: *"Your developers can build custom 3D applications on instant3Dhub using our APIs and SDKs—most customers deploy use case #2 in 3-4 weeks."* Platform value is discovered through experience, not sold upfront.
-
-**Product Reality: API-First Platform Enables Both**
-
-Internally, we build platform capabilities (APIs, SDKs, CAD loaders, integrations, rendering infrastructure) that power both strategies. Developer experience remains critical—but for **customer developers building on instant3Dhub post-sale**, not as primary buyer messaging. BRIX (planned 2026 launch) embodies this: a library that makes it easy for customer developers to quickly build 3D applications once they're engaged with the platform.
-
-**The Balance:**
-- **Sales:** Wins with use case positioning (*"Best Engineering Review for automotive"*)
-- **Customer Success:** Drives expansion with platform scalability (*"Let's quickly add Documentation using the same setup"*)
-- **Product:** Builds platform capabilities once, enables many use cases (avoids building 10 separate point solutions)
-- **End Result:** Customers experience both—immediate use case value + long-term platform scalability
+TBD
 
 ### Target Users / Target Workflows
 

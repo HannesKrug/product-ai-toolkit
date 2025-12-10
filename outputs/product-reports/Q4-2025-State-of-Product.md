@@ -132,7 +132,7 @@ TBD
 - **Spatial twins are standard in industrial workflows:** Manufacturing, engineering, and design teams rely on integrated spatial data as naturally as they use email or CAD today
 - **instant3Dhub powers the digital-physical fusion:** Our platform is the foundational technology enabling seamless integration of spatial data across industrial ecosystems
 - **Industrial workers access data contextually:** Information locality is overcome—workers interact with relevant spatial data wherever they are, without barriers between digital and physical spaces
-- **Ecosystem adoption:** 50K+ developers and industrial solution providers building on instant3Dhub to create spatial twin applications
+- **Ecosystem adoption:** 5K+ developers and industrial solution providers building on instant3Dhub to create spatial twin applications
 - **Market position:** Recognized as the enabling platform for spatial data integration in industrial contexts ("the platform for spatial twins")
 - **Customer satisfaction:** Developer Net Promoter Score (NPS) consistently above 60, reflecting ease of building spatial twin solutions on our platform
 
@@ -142,47 +142,18 @@ TBD
 
 *Quantitative health of the product in Q4 2025.*
 
-### Introduction: Our Product Metrics Framework
+**This is the first time we are formally introducing a metrics framework for instant3Dhub across the organization.** These four metrics will serve as our primary indicators of product health, customer engagement, and strategic progress going forward.
 
-**This is the first time we are formally introducing a metrics framework for instant3Dhub across the organization.** These three metrics will serve as our primary indicators of product health, customer engagement, and strategic progress going forward.
-
-#### **Why These Three Metrics?**
+### Our Product Metrics Framework
 
 We've selected metrics that align with our strategic priorities and provide actionable insights:
 
 1. **Unique Sessions per Month** → Measures overall platform usage and growth trajectory
-2. **Feature Adoption Rate (FAR)** → Reveals which features resonate with users and drive value
+2. **Feature Adoption Rate (FAR)** → Reveals which features resonate with users and drive value (Coming Q1 2026)
 3. **Active Customer Accounts** → Tracks our customer base health and growth
-4. **Time To First Value** -> TBD
+4. **Developer Documentation Engagement** → Proxy metric for API adoption and developer ecosystem health
 
 These metrics are **outcome-focused**: they tell us whether customers are actively using instant3Dhub and which capabilities matter most to them. This visibility is critical for making informed product, sales, and customer success decisions.
-
-#### **How to Read These Metrics**
-
-**Unique Sessions per Month:**
-- **What it counts:** Total unique user sessions across all customers where the session lasted at least 120 seconds and included feature usage (meaningful engagement, not just page loads)
-- **How to interpret trends:**
-  - 📈 Growing = More users actively engaging with platform
-  - 📉 Declining = Potential adoption issues or customer churn signals
-  - Seasonal patterns expected (holidays, project cycles)
-- **What it tells us:** Overall platform adoption and usage intensity. Our primary growth indicator.
-
-**Feature Adoption Rate (FAR):**
-- **What it measures:** For each feature, the percentage of unique sessions that included at least one usage ping containing that feature
-- **How to interpret:**
-  - High FAR (>40%) = Feature is widely adopted, core to workflows
-  - Medium FAR (15-40%) = Feature used by subset of users, potential for growth
-  - Low FAR (<15%) = Feature ignored, confusing, or not relevant—needs investigation
-- **What it tells us:** Which features deliver value vs. which are wasted investment. Guides roadmap prioritization and identifies where User Experience (UX)/enablement improvements are needed.
-
-**Active Customer Accounts:**
-- **What it counts:** Number of customers with active production instances generating sessions
-- **How to interpret:**
-  - Growth = Successful new customer onboarding
-  - Flat/Declining = Churn or stalled sales pipeline
-- **What it tells us:** Customer base health. Combined with Unique Sessions, shows whether growth is from new customers or deeper engagement from existing ones.
-
-#### **Data Stability & Completeness**
 
 **Important caveats as we establish this framework:**
 
@@ -190,18 +161,15 @@ These metrics are **outcome-focused**: they tell us whether customers are active
 
 ⚠️ **Coverage Gaps:** Current data excludes some customer contracts (e.g., Mercedes Benz on separate licensing structure) and has occasional tracking gaps. **Reported usage is understated**—true usage likely 10-15% higher than shown.
 
-⚠️ **Feature Adoption Rate - Limited Historical Data:** FAR tracking is newly implemented. Historical data is partial or unavailable for this report. Starting Q1 2026, we'll have comprehensive FAR visibility.
-
 ⚠️ **No Per-Customer Segmentation (Yet):** We aggregate all sessions but don't yet break down by individual customer, use case, or user cohort. This masks important signals (e.g., one customer driving 80% of sessions while others decline). Per-customer dashboards planned for 2026.
-
-**How to use this data:**
-- **Directional, not absolute:** Treat trends and patterns as reliable; exact numbers may be slightly understated
-- **Combine with qualitative feedback:** Metrics show *what* is happening; customer advisory board feedback explains *why*
-- **Expect evolution:** As we refine instrumentation in 2026, we'll uncover new insights and may adjust metric definitions
 
 ---
 
-### Unique Sessions per Month
+### Metric 1: Unique Sessions per Month
+
+**What It Measures:** Total unique user sessions across all customers where the session lasted at least 120 seconds and included feature usage (meaningful engagement, not just page loads).
+
+**Q4 2025 Data:**
 
 | Month | Unique Sessions | Trend |
 |-------|----------------|-------|
@@ -227,36 +195,68 @@ These metrics are **outcome-focused**: they tell us whether customers are active
 | | | |
 | **2025 Avg (Jan-Sep)** | **~111K/month** | 📈 +23% vs Q4 2024 |
 
+**Interpretation:**
 
-### Active Customer Accounts
+instant3Dhub demonstrates **resilient growth in 2025**, with sessions averaging 111K/month (+23% vs Q4 2024). The platform sustained usage around 110-120K sessions/month with a peak of 137K in July, coming from around 10 accounts with Mercedes Benz, BMW, and Daimler Trucks NA contributing most of the usage.
 
-**Current: 10 active accounts** (Q4 2025)
+**Key Insights:**
+- **Platform usage is growing:** Unique Sessions grew from ~90K/month (Q4 2024) to ~111K/month average in 2025, showing existing customers increasing their usage (deeper adoption)
+- **"Sticky when adopted" quality:** Sustained engagement demonstrates platform delivers ongoing value
+- **Seasonal patterns visible:** December holiday drop, July peak aligns with industrial project cycles
 
-This includes enterprise customers and partners. Note: Some partners are scheduled for offboarding in 2026 as we sharpen our focus on enterprise use cases.
-
+**Strategic Implications:**
+- ✅ **Strength:** Platform demonstrates value retention—customers who adopt continue using
+- ⚠️ **Challenge:** Growth is from existing customer expansion, not new customer acquisition (see Active Customer Accounts)
+- 🎯 **2026 Focus:** Maintain engagement within existing accounts while addressing onboarding gaps to grow customer base
 
 ---
 
-### Feature Adoption Rate (FAR)
+### Metric 2: Feature Adoption Rate (FAR)
 
-**Status: Implementation in Progress** 🟡
+**What It Measures:** For each feature, the percentage of unique sessions that included at least one usage ping containing that feature. High FAR (>40%) = widely adopted; Medium (15-40%) = subset usage; Low (<15%) = underutilized or not relevant.
+
+**Q4 2025 Status:** Implementation in Progress 🟡
 
 Feature Adoption Rate tracking is being implemented in Q1 2026. This metric will reveal which features drive value and which are underutilized, enabling data-driven roadmap decisions.
 
-**What we'll track:**
-- **Core Viewer Features:** 3D visualisation, part selection, camera controls, measurements
-- **Collaboration Features:** Annotations, Collaboration
 
 
-**Target Availability:** Q1 2026 baseline data, Q2 2026 trend analysis
+**2026 Priority:** Establish FAR baseline in Q1, use Q2 data to inform H2 2026 roadmap decisions.
 
 ---
 
-### Developer Documentation Portal Engagement
+### Metric 3: Active Customer Accounts
 
-**Purpose:** Documentation portal traffic serves as a **proxy metric for API adoption and developer ecosystem health**. Higher engagement indicates active development on instant3Dhub APIs; low engagement suggests limited expansion within customer developer teams.
+**What It Measures:** Number of customers with active production instances generating sessions. Tracks customer base health—growth indicates successful onboarding, flat/declining signals churn or stalled pipeline.
 
-**Current State (Nov 10 - Dec 9, 2025):**
+**Q4 2025 Data:**
+
+**Current: 10 active accounts**
+
+This includes enterprise customers and partners. Note: Some partners are scheduled for offboarding in 2026 as we sharpen our focus on enterprise use cases.
+
+**Interpretation:**
+
+10 active accounts in Q4 2025 reflects **stable retention but limited new customer acquisition**. Combined with usage growth (+23%), this reveals:
+
+**Key Insights:**
+- **Good news:** Existing customers are expanding usage (land-and-expand working within accounts)
+- **Challenge:** Sales pipeline needs acceleration to grow beyond current base
+- **Pattern:** Growth is "deepening" (more usage per customer) rather than "widening" (more customers)
+
+**Strategic Implications:**
+- ✅ **Strength:** High retention—customers who onboard stay and expand
+- ⚠️ **Critical gap:** Onboarding/deployment friction blocking new customer acquisition (Gap 5.1)
+- 🎯 **2026 Focus:** Address deployment complexity to unlock sales pipeline and double customer base
+
+**Bottom Line:** Platform demonstrates value for customers who successfully onboard. The barrier is *getting* customers onboarded, not keeping them engaged post-onboarding.
+
+
+### Metric 4: Developer Documentation Portal Engagement
+
+**What It Measures:** Documentation portal traffic as a proxy metric for API adoption and developer ecosystem health. Higher engagement indicates active development on instant3Dhub APIs; low engagement suggests limited expansion within customer developer teams.
+
+**Q4 2025 Data (Nov 10 - Dec 9, 2025):**
 
 | Metric | Value | Interpretation |
 |--------|-------|----------------|
@@ -265,85 +265,31 @@ Feature Adoption Rate tracking is being implemented in Q1 2026. This metric will
 | **Actions per Visit** | 2-10 actions average | Shallow engagement |
 | **Bounce Rate (New Visitors)** | 33-100% | Many leave after one page |
 
-**Geographic Patterns - Consistent Users:**
+**Geographic Patterns:**
 
-| Location | Interpretation |
+| Location | Likely Customer |
 |----------|----------------|
-| **Stuttgart area (Germany)** | Likely Mercedes Benz development teams |
+| **Stuttgart area (Germany)** | Mercedes Benz development teams |
 | **Portugal (Porto, Lisboa)** | BMW development team |
 
-**Pattern:** Same customer teams accessing docs repeatedly, but **not expanding to broader developer base within those organizations**.
+**Interpretation:**
+
+Documentation engagement reveals a **maintenance mode, not growth mode** pattern. Same customer teams (Mercedes, BMW) access docs repeatedly, but we're not seeing:
+- New developers joining from existing customers → no expansion within accounts
+- New customers exploring docs → limited pipeline exploration
+- Month-over-month growth → stagnant developer ecosystem
 
 **Key Insights:**
-
-**1. Maintenance Mode, Not Growth Mode**
-- Visitor count is stable but not growing month-over-month
-- Same developer teams from same customers (Mercedes, BMW) accessing repeatedly
-- Not seeing new developers joining from existing customers → no expansion within accounts
-- Not seeing new customers exploring docs → limited pipeline exploration
-
-**2. Documentation as Leading Indicator**
-- Low docs traffic = Low API development activity = Limited platform usage expansion
-- Customers aren't building new use cases or expanding integrations (aligns with Hella's rollout challenges in Theme 4.2-4.3)
-- Developer engagement confined to small core teams (2-5 developers per customer based on visitor patterns)
-
-
-**Strategic Guidance:**
-
-✅ **Do:** Keep docs running and up to date (critical for existing Mercedes/BMW developer teams)
-
-⚠️ **Don't:** Over-invest in documentation expansion until more traffic 
-
-🎯 **Focus:** Drive more developers to the site as an indicator of actual instant3Dhub API usage and development activity. Growing documentation engagement should be a key metric for measuring developer ecosystem health in 2026. Understand usage of docs during app developement at customers better. 
-
-**Target State:** If documentation and developer experience were strong, we'd expect:
-- Growing unique visitors month-over-month (new developers discovering platform)
-- Expanding geographic diversity (new customers exploring)
-
----
-
-### Interpretation: What These Metrics Tell Us
-
-**Overall Health: Positive Growth Trajectory with Customer Base Stability**
-
-instant3Dhub demonstrates **resilient growth in 2025**, with Unique Sessions averaging 111K/month (+23% vs Q4 2024). The platform sustained usage around 110-120K sessions/month with a peak of 137K in July coming from around 10 accounts with Mercedes Benz, BMW and Daimler Trucks NA contributing to most of the usage. 
-
-**Key Insights:**
-
-**1. Platform Usage is Growing**
-
-Unique Sessions grew from ~90K/month (Q4 2024) to ~111K/month average in 2025, with Q3 reaching 119K/month average. This shows:
-- Existing customers increasing their usage (deeper adoption)
-- Platform delivering ongoing value (sustained engagement)
-
-
-**2. Customer Base Stable But Growing Slow**
-
-10 active accounts in Q4 2025 reflects stable retention but limited new customer acquisition. Combined with usage growth, this means:
-- **Good News:** Existing customers are expanding usage (land-and-expand working)
-- **Challenge:** Sales pipeline needs acceleration to grow beyond current base
-- **Focus:** Address onboarding/deployment friction (Gap 5.1)
-
-**3. Feature Adoption Visibility**
-
-TBD
+- **Documentation as leading indicator:** Low docs traffic = Low API development activity = Limited platform usage expansion
+- **Small core teams:** Developer engagement confined to 2-5 developers per customer based on visitor patterns
+- **No use case expansion:** Customers aren't building new applications or expanding integrations (aligns with Hella's rollout challenges in Theme 4.2-4.3)
 
 **Strategic Implications:**
+- ✅ **Do:** Keep docs running and up to date (critical for existing Mercedes/BMW teams)
+- ⚠️ **Don't:** Over-invest in documentation expansion until underlying product gaps (Gap 5.3: docs quality, Gap 5.2: missing features) are addressed
+- 🎯 **2026 Focus:** Growing documentation engagement should be a key metric for developer ecosystem health. First address doc quality issues (Gap 5.3), then drive more developers to the site as indicator of actual API usage growth
 
-**Strengths to Build On:**
-- ✅ Platform demonstrates "sticky when adopted" quality (sustained sessions)
-- ✅ Existing customers increasing usage (+23% YoY growth)
-
-**Gaps to Address:**
-- ⚠️ Customer base not growing enough (onboarding/deployment friction blocking new accounts)
-
-
-**2026 Focus:**
-- **Close onboarding gaps** (Gap 5.1: deployment complexity) to unlock sales pipeline and grow customer base
-- **Improve feature parity** (Gap 5.2: missing viewer features) to convert project-based usage into daily workflows
-
-
-**Bottom Line:** 2025 showed strong growth within our existing customer base (+23% sessions). The challenge ahead is expanding beyond 10 accounts by addressing the product gaps that block new customer onboarding—while using Feature Adoption Rate data to double down on what's working.
+**Target State:** If documentation and developer experience were strong, we'd expect growing unique visitors month-over-month (new developers discovering platform) and expanding geographic diversity (new customers exploring).
 
 ---
 

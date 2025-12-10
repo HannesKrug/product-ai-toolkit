@@ -555,21 +555,21 @@ Current role management in 3DSpaces is **too basic ("sticker" roles with no back
 
 ### Overview: The 7 Critical Product Gaps
 
-Based on comprehensive Internal and Customer Advisory Board feedback, we've identified 7 prioritized product gaps that are blocking growth in 2026. These gaps cluster into three categories: **Onboarding & Integration** (getting customers live), **Core Product Quality** (trust and feature parity), and **Enterprise Readiness** (scale and security).
+Based on comprehensive Internal and Customer Advisory Board feedback plus MOGA operational tracking, we've identified 7 prioritized product gaps blocking growth in 2026.
 
-| # | Gap | Personas Affected | Priority | Impact |
-|---|-----|-------------------|----------|--------|
-| **5.1** | **Integration & Deployment Complexity** | Integrators/Operators | 🔴 **HIGH** | Blocks every new customer onboarding, delays revenue, competitive disadvantage |
-| **5.2** | **Missing Core Viewer Features** | End Users (Engineers, Designers) | 🔴 **HIGH** | End Users stick with legacy tools, fragile adoption, lost productivity claims |
-| **5.3** | **Documentation & Developer Self-Service** | Developers | 🔴 **HIGH** | Extended time-to-value, support overhead, BRIX ecosystem blocker |
-| **5.4** | **Native CAD Data Fidelity & Quality** | End Users (Engineers, Designers) | 🔴 **HIGH** | Trust erosion, can't use for critical engineering decisions, expansion blocked |
-| **5.5** | **Collision/Clash Detection** | End Users (Engineers) | 🟡 **MEDIUM** | Lost deals, competitive gap vs. CoLab, misaligned with Engineering Review focus |
-| **5.6** | **Product Stability at Enterprise Scale** | All Personas | 🟡 **MEDIUM** | Churn risk, operational fear, use case limitations (Porsche can't use full models) |
-| **5.7** | **Roles & Permissions System** | Integrators/Operators | 🟡 **MEDIUM** | Limits external collaboration use cases, blocks packaged solutions |
+| # | Gap | Personas Affected | Priority | Phase | Impact |
+|---|-----|-------------------|----------|-------|--------|
+| **5.1** | **Integration & Deployment Complexity** | Integrators/Operators | 🔴 **HIGH** | Adoption | Blocks every new customer, delays revenue |
+| **5.2** | **Missing Core Viewer Features** | End Users (Engineers, Designers) | 🔴 **HIGH** | Adoption | End Users stick with legacy tools |
+| **5.3** | **Documentation & Developer Self-Service** | Developers | 🔴 **HIGH** | Adoption | Extended time-to-value, BRIX blocker |
+| **5.4** | **Native CAD Data Fidelity & Quality** | End Users (Engineers, Designers) | 🔴 **HIGH** | Adoption | Trust erosion, expansion blocked |
+| **5.5** | **Observability & Debugging** | Integrators/Operators + Support | 🔴 **HIGH** | Retention | Can't troubleshoot production, support dependency |
+| **5.6** | **Product Stability at Enterprise Scale** | All Personas | 🟡 **MEDIUM** | Retention | Churn risk, use case limitations |
+| **5.7** | **Roles & Permissions System** | Integrators/Operators | 🟡 **MEDIUM** | Adoption | Limits external collaboration |
 
-**Pattern:** The four 🔴 **HIGH** priority gaps (5.1-5.4) represent **table-stakes capabilities** that customers expect but we're not consistently delivering. These block adoption, trust, and expansion. The three 🟡 **MEDIUM** priority gaps (5.5-5.7) represent **competitive differentiators and enterprise requirements** that limit our addressable market and use case expansion.
+**Pattern:** The five 🔴 **HIGH** priority gaps (5.1-5.5) represent **table-stakes capabilities** customers expect. Gaps 5.1-5.4 block **Adoption** (Integrators can't deploy, End Users can't trust output, Developers can't integrate). Gap 5.5 blocks **Retention** (customers can't operate independently at scale). The two 🟡 **MEDIUM** gaps (5.6-5.7) affect retention and enterprise readiness but don't block initial adoption.
 
-**2026 Imperative:** Address all four HIGH priority gaps to convert fragile platform potential into defensible market position. Start with Gap 5.1 (Integration & Deployment) as it affects every new customer.
+**2026 Imperative:** Address all five HIGH priority gaps. Start with Gap 5.1 (affects every new customer), then Gaps 5.2-5.4 (trust and feature parity), then Gap 5.5 (operational independence for scaled customers).
 
 ---
 
@@ -587,6 +587,14 @@ Installing, configuring, and deploying instant3Dhub is too difficult for custome
 - **Porsche:** Teamcenter integration "difficult due to technical hurdles"
 - **Customer Success (Hazem):** *"PLM integration uncertainty...documentation and validation tools lacking"*
 - **Key Account (Bernd):** *"Top issues: not having a package solution and deployment time/installer"*
+
+**MOGA Initiative (Internal Operations Tracking):**
+- **Issue #2 - Managed Database Support:** #1 operational pain point (Reach: 8.3, Impact: 8.7). Database ansible not feasible for managed DBs, forcing customers to self-manage PostgreSQL. Affects Mercedes Benz Supplier Collaboration, Hella, Daimler Truck, DMG Mori. *Proposition: I3DHUB-6267 to add i3d database to migration tool.*
+- **Issue #5 - Airgapped Deployments:** **70% of PoC projects** attempt airgapped single-node setups with high failure rate (Reach: 5, Impact: 6). Documentation insufficient, testing gaps. Airgap makes it hard to work on during initial customer integrations. Affects GROB, Grimme, majority of PoC projects. *Proposition: Should be tested and docs should be created.*
+- **Issue #19 - ConfigMap Updates Require Restart:** Configuration changes require manual pod restarts (Reach: 7.8, Impact: 7.1). Operational friction during updates. Affects Mercedes Benz XRMesh, 3DSuite/sma4u/azure. *Issue: ConfigMaps not being reread after changes could be fixed by tracking hash and restarting services.*
+- **Issue #18 - Secret Management:** Complex secret handling blocks automation (Reach: 7.3, Impact: 4.6). Base64 encoding issues prevent Helm templating. Affects 3DSuite/sma4u/azure/XRMesh. *Issue: Support for secret Refs AND plain secrets, trick with base64 encoding makes secrets not usable.*
+- **Issue #4 - License Server Packaging:** License server packages convert for Ubuntu 24.04 doesn't work (Reach: 3.5, Impact: 6), blocking airgapped deployments. *Proposition: Create proper ubuntu packages.*
+- **Issue #6 - GPU Driver Issues:** MESA driver sometimes used instead of NVIDIA driver (Reach: 3), causing severe performance drops. Detection is first step; fixing is complex due to cloud provider base-image constraints. Affects EDF, Mercedes Benz XRMesh.
 
 **Impact:**
 
@@ -728,39 +736,52 @@ Incomplete support for CAD format features (flexible components, color overrides
 
 ---
 
-### 5.5 Gap: Collision/Clash Detection
+### 5.5 Gap: Observability & Debugging
 
 **Definition:**
 
-No automatic collision detection or clash checking capability for engineering reviews. Customers want AI-based design checks (e.g., "Does this component interfere with others?") for assembly validation, interference detection, and design optimization. This feature is critical for Engineering Review use case (identified as top market opportunity) and has been requested by multiple customers (Innio, Claas VR, ÖBB).
+Limited visibility into production systems and inadequate debugging tools make troubleshooting instant3Dhub issues difficult or impossible without Threedy support. Tracing instrumentation is incomplete and infrastructure (Jaeger) is unreliable, forcing operators to disable it entirely. Log levels require redeployment to change, blocking real-time diagnosis. No debugging containers with symbols available for crash analysis. Operational tools (cache management, health checks) don't scale or lack functionality. **Result:** Customers can't self-serve troubleshooting, remain dependent on Threedy support, and struggle to operate at enterprise scale.
 
 **Evidence:**
 
-- **Sales (Aron, Andreas, Athanasios):** *"Customer Innio wants AI-based design checks, such as automatic collision alerts and learning from usage, for engineering reviews."*
-- **Sales:** *"Collision checks also a topic in the past with Claas in VR, also ongoing topic in ÖBB."*
-- **Sales:** *"Collision checks are a recurring customer need and have influenced past project outcomes; should be considered a key feature."*
-- **VP Sales:** Engineering Review identified as "Killer-Thema" (killer use case) with "sehr hoher Bedarf im Markt" (very high market demand)
+**MOGA Initiative (Internal Operations Tracking):**
+- **Issue #15 - Tracing Instrumentation:** Tracing only available in few components (Reach: 4.3, Impact: 7.0). Can't trace requests end-to-end across services, making multi-service debugging impossible. Affects Mercedes Benz XRMesh.
+- **Issue #16 - Debugging Containers:** No means to deploy containers with debugging symbols for crash analysis (Reach: 3.2, Impact: 6.8). C++ crashes at customer sites require symbols to diagnose. Currently can't deploy individual components with custom images. Affects Mercedes Benz XRMesh, 3DSuite/sma4u/azure.
+- **Issue #26 - Cache Management at Scale:** Cache clean operation unusable for large cache counts (Reach: 3.4, Impact: 7.2). Poor performance blocks resources during cleanup ("marked for deletion" resources can't be used). Affects Mercedes Benz XRMesh, 3DSuite/sma4u/azure.
+- **Issue #14 - Tracing Infrastructure Unreliable:** Many customers disable tracing because Jaeger uses excessive memory and crashes (Reach: 4, Impact: 3.2). Operators turn it off, losing observability. Affects Mercedes Benz XRMesh.
+- **Issue #10 - Log Level Changes Require Redeploy:** Can't change log levels on running systems without redeployment (Reach: 5, Impact: 4.1). Blocks production debugging where intensive logging needed on specific nanoservices. Affects Mercedes Benz XRMesh, 3DSuite/sma4u/azure.
+- **Issue #13 - System-Level Health Checks Missing:** Only pod-level health checks available via Kubernetes (Reach: 3.7, Impact: 3.2). Need endpoints for monitoring software to gather system-level health without continuous ping. Affects Mercedes Benz XRMesh.
+- **Issue #12 - Non-Standard Logging:** Some services only log to admin UI (not standard), some logs not available anywhere (e.g., Microservice logs). Blocks integration with standard observability tools (Reach: 2.5). Affects Mercedes Benz XRMesh.
+- **Issue #11 - Network Metrics Unavailable:** No benchmarks for collecting network metrics (latencies, bandwidth) between services (Reach: 5.2, Impact: 5.1). Affects Mercedes Benz XRMesh.
+- **Issue #25 - Cache Clean Not Idiot-Proof:** No confirmation before cache clean, "potentially deadly in mesh scenarios" (Reach: 3). Affects Mercedes Benz XRMesh, 3DSuite/sma4u/azure.
+
+**Customer Pattern:** Mercedes Benz XRMesh (large-scale deployment) dominates observability issues—they've hit the operational ceiling. Issues cluster around inability to diagnose production problems without Threedy intervention.
 
 **Impact:**
 
-- **Who Is Affected:** End Users (Engineers) in automotive, machinery, manufacturing doing design reviews and assembly planning
+- **Who Is Affected:** Integrators/Operators managing production systems, Threedy Support teams troubleshooting customer issues
 - **Business Impact:**
-  - **Lost deals:** Innio explicitly requested (likely not unique)
-  - **Competitive disadvantage:** CoLab winning with AI-assisted review features
-  - **Misalignment with strategy:** VP Sales identified Engineering Review as top use case; we lack key feature for it
+  - **Support dependency:** Customers can't self-serve troubleshooting → Threedy Support becomes bottleneck
+  - **Extended MTTR (Mean Time To Resolution):** Without tracing/debugging tools, issue resolution takes hours or days instead of minutes
+  - **Operational friction at scale:** Mercedes Benz XRMesh hitting limits—can't operate independently
+  - **Hidden issues:** Customers disable tracing (Issue #14) → lose visibility into production problems until they escalate
+  - **Competitive gap:** Enterprise customers expect production-grade observability (OpenTelemetry, distributed tracing, debugging tools)
 
-**Priority:** 🟡 **HIGH**
+**Priority:** 🔴 **HIGH**
 
 **Rationale:**
-- **Recurring customer request** (3+ customers mentioned: Innio, Claas, ÖBB)
-- **Has influenced past project outcomes** (Sales quote: lost opportunities)
-- **Strategic importance:** Engineering Review is our target use case; this is table-stakes
-- **Competitive gap:** CoLab offers AI-based review; we don't
+- **High-impact scores:** Three issues score 6.8-7.2 impact—higher than many current HIGH gaps
+- **Retention blocker:** Doesn't block adoption, but blocks scaling and self-service operations
+- **Customer pattern:** Mercedes Benz XRMesh (enterprise-scale deployment) consistently hits these walls
+- **Support burden:** Lack of observability keeps customers dependent on Threedy—doesn't scale
+- **Phase:** Retention—customers successfully onboard but struggle to operate production systems independently
 
 **Notes / Dependencies:**
-- Requires: Collision detection algorithm, UI for highlighting clashes, potentially AI/ML for learning patterns
-- Could unlock: Engineering Review market segment, differentiation vs. CoLab
-- Related to: AI roadmap, rendering capabilities
+- Requires: Tracing instrumentation expansion, Jaeger replacement (OpenTelemetry?), debugging container support, runtime log level API, system health check endpoints, operational tool improvements (cache mgmt, ConfigMap auto-reload)
+- Could unlock: Self-service troubleshooting, reduced support burden, enterprise operational readiness
+- Related to: Gap 5.1 (ConfigMap/logging infrastructure), Gap 5.6 (stability issues become visible with better observability)
+
+**Strategic Context:** Observability is **operational maturity**. Mercedes Benz XRMesh proves the pattern: customers who successfully onboard and scale hit observability gaps. Without production-grade debugging tools, we can't support enterprise customers at scale—they remain dependent on Threedy Support instead of operating independently.
 
 ---
 
@@ -768,7 +789,7 @@ No automatic collision detection or clash checking capability for engineering re
 
 **Definition:**
 
-Database crashes with large datasets, multi-year unfixed issues (fragment addressing workaround), GPU driver bugs causing performance drops, QueryAPI/SpaceAPI/MemberAPI stability concerns, and lack of support for enterprise infrastructure (external managed databases, auto-scaling storage) undermine confidence in platform's enterprise readiness. Customers have experienced PostgreSQL corruptions, service outages, escalation meetings over longstanding bugs, and unpredictable performance with large assemblies.
+Database crashes with large datasets, multi-year unfixed issues (fragment addressing workaround), GPU driver bugs causing performance drops, QueryAPI/SpaceAPI/MemberAPI stability concerns, and lack of support for enterprise infrastructure (external managed databases, auto-scaling storage) undermine confidence in platform's enterprise readiness. Customers have experienced PostgreSQL corruptions, service outages, escalation meetings over longstanding bugs, and unpredictable performance with large assemblies. **Note:** This gap focuses on core stability/reliability issues (crashes, corruptions, performance degradation), distinct from observability/debugging tooling covered in Gap 5.5.
 
 **Evidence:**
 
@@ -789,11 +810,11 @@ Database crashes with large datasets, multi-year unfixed issues (fragment addres
   - **Operational risk:** Database corruptions, service outages create fear of production deployment
   - **Brand damage:** "Escalation meetings" signal relationship strain (Daimler)
 
-**Priority:** 🟡 **HIGH**
+**Priority:** 🟡 **MEDIUM**
 
 **Rationale:**
+- **Retention risk, not adoption blocker:** Stability issues affect customers at scale but don't prevent initial deployment
 - **Trust erosion:** Reliability is a strategic pillar; failing here undermines entire positioning
-- **Enterprise blocker:** Companies won't deploy mission-critical if stability questionable
 - **Long-term relationship risk:** Multi-year unfixed issues signal lack of commitment (Sascha: "disgrace")
 - **Use case limitations:** Performance issues restrict what customers can do (Porsche)
 
@@ -826,11 +847,11 @@ Current role management in 3DSpaces is too generic ("sticker" roles with no back
   - **Security concerns delay deals:** Enterprise IT won't approve without proper access controls
   - **Competitive gap:** Collaboration features being developed by competitors include robust permissions
 
-**Priority:** 🟡 **HIGH**
+**Priority:** 🟡 **MEDIUM**
 
 **Rationale:**
-- **Blocks external collaboration use cases** (high-value expansion opportunities)
-- **Package solution blocker:** Timm explicitly said customers want to buy this as a feature
+- **Adoption consideration, not blocker:** Limits external collaboration use cases but doesn't prevent initial deployment
+- **Package solution opportunity:** Timm explicitly said customers want to buy this as a feature
 - **Enterprise IT requirement:** Proper RBAC is table-stakes for enterprise software
 - **Strategic opportunity:** Enabling external collaboration opens new markets (supplier portals, customer configurators)
 
@@ -948,6 +969,31 @@ Customer perception that Threedy is **slow to fix issues and release improvement
 - Requires: Faster release cadence, hotfix process, easier deployment/upgrade path (relates to Gap 5.1), SLA commitments for critical issues
 - Could unlock: Customer confidence, competitive positioning improvement, renewal security
 - Related to: Deployment complexity (easier upgrades = faster value delivery)
+
+---
+
+## Other Gaps Identified
+
+*Lower-priority gaps that didn't make the critical list but warrant future consideration.*
+
+### Collision/Clash Detection for Engineering Review
+
+**Summary:** End Users consistently request automatic collision detection and clash checks for engineering reviews (Innio, Claas VR, ÖBB). This is table-stakes for engineering review workflows where CoLab is winning. However, unlike other feature gaps, collision detection requires deep changes across application, API, and infrastructure layers—it's not a quick UI/SDK enhancement.
+
+**Why Not Critical Now:**
+- **Not a blocker for initial adoption:** Customers can onboard and use instant3Dhub for visualization and collaboration without collision detection
+- **Workarounds exist:** Engineers currently perform clash checks in native CAD tools before bringing models into instant3Dhub
+- **Strategic timing:** Should be addressed after foundational gaps (5.1-5.5) are resolved and platform stability is proven
+- **Complexity vs. urgency:** Requires significant R&D investment; better to invest in gaps blocking adoption/retention first
+
+**Evidence:**
+- **Sales (Aron, Andreas, Athanasios):** Customer Innio wants AI-based design checks including automatic collision alerts for engineering reviews
+- **Sales:** Collision checks recurring topic with Claas VR and ÖBB; have influenced past project outcomes
+- **VP Sales:** Engineering Review is top use case, CoLab winning in this space with collision detection as table-stakes
+
+**Future Consideration:** Once Gaps 5.1-5.5 are addressed and we have proven platform stability at scale, collision detection should be revisited as part of AI-assisted engineering review roadmap (learning from usage patterns, automated design checks, smart recommendations).
+
+**Reference:** See Section 4.4 (Theme: Collision/Clash Detection Repeatedly Requested, Missing) for full customer evidence and strategic context.
 
 ---
 

@@ -10,7 +10,7 @@ user_context/raw/*
 !user_context/raw/**/README.md
 
 # Generated outputs (user's work, not part of toolkit)
-outputs/*
+
 # EXCEPT: Keep README.md structure guides
 !outputs/**/README.md
 

@@ -53,8 +53,6 @@ We create foundational technology to enable integrated spatial twins that interw
 
 ### Strategic Pillars
 
-Our product strategy rests on three outcome-focused themes that align with how our buyers (Industrial Innovation Leaders), End Users (Engineers), Integrators (operating and integrating instant3Dhub into IT Landscape) and Developers (using our APIs) evaluate success:
-
 TBD
 
 ---
@@ -295,7 +293,7 @@ Documentation engagement reveals a **maintenance mode, not growth mode** pattern
 
 ## 4. Customer Insights & Feedback Themes
 
-*What we're hearing from comprehensive Internal and Customer Advisory Board sessions (Sales, Presales, Customer Success, Professional Services, VP Sales, Key Accounts + Porsche, Daimler Truck external customers).*
+*What we're hearing from comprehensive Internal and Customer Advisory Board sessions (Sales, Presales, Customer Success, Professional Services, Key Accounts + BMW, Mercedes Benz, Porsche, Daimler Truck, Hella external customers).*
 
 ### 4.1 Theme: Integration & Deployment Complexity Blocking Onboarding
 *Affects: Integrators/Operators (IT Admins, DevOps Engineers)*
@@ -389,7 +387,7 @@ instant3Dhub **lacks essential viewer functionality** that End Users expect from
 
 **Internal Stakeholders:**
 - **Customer Success (Timm):** *"Selling a platform and always losing out against apps."* - Customers expect packaged, feature-rich applications, not minimal viewers requiring extensive customization
-- **VP Sales (Marcus):** *"Produktansprache statt 'Lösungs'-Spektrum"* (Product messaging, not solution spectrum) - Customers want concrete, feature-complete solutions, not flexible but bare-bones platforms
+- **VP Sales:** *"Produktansprache statt 'Lösungs'-Spektrum"* (Product messaging, not solution spectrum) - Customers want concrete, feature-complete solutions, not flexible but bare-bones platforms
 - **Presales (Sascha, Timo):** Customers evaluate instant3Dhub against mature legacy tools with decades of accumulated features. When basic functionality (grids, measurements, part manipulation) requires custom development, customers question the value proposition
 
 

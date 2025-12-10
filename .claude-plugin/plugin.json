@@ -1,0 +1,57 @@
+{
+  "name": "product-ai-toolkit",
+  "version": "1.0.0",
+  "description": "Product Manager Toolkit - OKRs, PRDs, User Stories, Research & Product Reports",
+  "components": {
+    "skills": [
+      {
+        "name": "okr-expert",
+        "description": "Apply OKR best practices from Christina Wodtke and Rick Klau when creating, reviewing, or discussing OKRs"
+      },
+      {
+        "name": "okr-monday",
+        "description": "Monday commitment weekly check-in for OKRs"
+      },
+      {
+        "name": "okr-friday",
+        "description": "Friday celebration weekly check-in for OKRs"
+      },
+      {
+        "name": "prd-creator",
+        "description": "Create Product Requirements Documents (PRDs) in Confluence for Features/Epics"
+      },
+      {
+        "name": "user-stories",
+        "description": "Create User Stories from PRDs, break down EPICs, write standalone stories, file bug tickets"
+      },
+      {
+        "name": "interview-guide",
+        "description": "Creates user interview guides for product research (Discovery, Validation, Usability Testing)"
+      },
+      {
+        "name": "interview-analysis",
+        "description": "Analyzes user interview sessions against research goals from interview guides"
+      },
+      {
+        "name": "jira-comment-digest",
+        "description": "Summarizes Jira ticket comment threads and ongoing discussions"
+      },
+      {
+        "name": "user-context",
+        "description": "Guides users through setting up or updating company, product, and team context"
+      },
+      {
+        "name": "skill-creator",
+        "description": "Create new Claude Code Skills efficiently"
+      },
+      {
+        "name": "hook-creator",
+        "description": "Creates Claude Code hooks for tool control, logging, and automation"
+      },
+      {
+        "name": "state-of-product",
+        "description": "Creates State Of The Product Reports - internal documents summarizing stakeholder feedback and defining product direction"
+      }
+    ]
+  }
+}

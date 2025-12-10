@@ -393,6 +393,7 @@ Skills activate **automatically** based on keywords — you decide when to trigg
 - **OKRs:** `okr-expert`, `okr-monday`, `okr-friday`
 - **PRDs & user stories:** `prd-creator`, `user-stories`
 - **User research:** `interview-guide`, `interview-analysis`
+- **Product reports:** `state-of-product`
 - **Utilities:** `user-context`, `jira-comment-digest`, `skill-creator`, `hook-creator`
 
 Users do NOT need to name the skill — matching happens automatically.

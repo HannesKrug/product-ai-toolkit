@@ -295,6 +295,16 @@ Documentation engagement reveals a **maintenance mode, not growth mode** pattern
 
 *What we're hearing from comprehensive Internal and Customer Advisory Board sessions (Sales, Presales, Customer Success, Professional Services, Key Accounts + BMW, Mercedes Benz, Porsche, Daimler Truck, Hella external customers).*
 
+We identify the following themes: 
+4.1 Theme: Integration & Deployment Complexity Blocking Onboarding
+4.2 Theme: Native CAD Data Fidelity Issues → Visualization Not Trusted
+4.3 Theme: Missing Core Viewer Features → End Users Stick With Legacy Tools
+4.4 Theme: Collision/Clash Detection Repeatedly Requested, Missing
+4.5 Theme: Documentation & Developer Self-Service Gaps → High Support Overhead
+4.6 Theme: Product Stability Concerns at Scale → Trust Undermined
+4.7 Theme: Roles & Permissions Too Generic → Blocks External Collaboration
+
+
 ### 4.1 Theme: Integration & Deployment Complexity Blocking Onboarding
 *Affects: Integrators/Operators (IT Admins, DevOps Engineers)*
 
@@ -412,37 +422,20 @@ instant3Dhub **lacks essential viewer functionality** that End Users expect from
 - **Competitive vulnerability:** End Users compare us to established tools and find us lacking, reducing win rates
 - **"Selling platform, losing to apps":** Sales team consistently loses deals because customers want solutions, not minimal viewers requiring custom development on their side
 
----
+#### Advanced Feature Example: Collision/Clash Detection
 
-### 4.4 Theme: Collision/Clash Detection Repeatedly Requested, Missing
-*Advanced Feature Layer: Missing high-value features that require API and infrastructure changes*
-*Affects: End Users (Engineers) Performing Design Validation*
+**Note on Prioritization:** While collision detection is a recurring customer request, it has been classified as a lower-priority gap for 2026 (see Section 5: Other Gaps Identified). The rationale: it requires deep API/infrastructure changes and is not an adoption blocker—customers can onboard without it, and engineers currently perform clash checks in native CAD tools. We prioritize foundational gaps (deployment, documentation, data fidelity, observability) before advanced features.
 
-**What End Users Say:**
+**Customer Evidence:**
+- **Sales (Aron, Andreas, Athanasios):** Customer Innio wants AI-based design checks including automatic collision alerts for engineering reviews
+- **Sales:** Collision checks recurring topic with Claas VR and ÖBB; have influenced past project outcomes
+- **VP Sales:** Engineering Review is top use case, CoLab is winning in this space with collision detection as table-stakes
 
-End Users **consistently request automatic collision detection and clash checks** for engineering reviews. This is critical for design validation (e.g., does this component interfere with others?), assembly planning, and AI-assisted design checks. **Absence of this feature has influenced past project outcomes** and is a recurring pain point across multiple customers (Innio, Claas VR, ÖBB).
-
-**The Strategic Challenge:** Unlike the feature parity issues in Theme 4.3 (which could be addressed through UI/SDK enhancements), collision detection is one of several requested features that requires **deep changes across application, API, and infrastructure layers**. This isn't about customization being too heavy—it's about capabilities that don't exist in the platform at all.
-
-**Evidence:**
-
-**Internal Stakeholder:**
-- **Sales (Aron, Andreas, Athanasios):** *"Customer Innio wants AI-based design checks, such as automatic collision alerts and learning from usage, for engineering reviews in instant3Dhub."*
-- **Sales:** *"Collision checks also a topic in the past with Claas in VR, also ongoing topic in ÖBB."*
-- **Sales:** *"Collision checks are a **recurring customer need and have influenced past project outcomes**; should be considered a key feature."*
-
-**Why It Matters:**
-
-**Engineering Review is the top use case** (per VP Sales), and CoLab is winning in this space. Collision detection is a **table-stakes feature** for engineering review workflows. Without it, we can't compete effectively in our core market.
-
-**Business Impact:**
-- Lost deals (Innio explicitly requested, likely not unique)
-- Competitive disadvantage vs. CoLab (which offers AI-assisted review)
-- Misalignment with stated strategic focus (Engineering Review as killer use case)
+**Why Not Critical for 2026:** Unlike the viewer feature gaps above (which can be addressed through UI/SDK enhancements for near-term adoption), collision detection requires significant platform development. Better to address after foundational gaps (5.1-5.5) are resolved and we have proven platform stability at scale. Future consideration as part of AI-assisted engineering review roadmap.
 
 ---
 
-### 4.5 Theme: Documentation & Developer Self-Service Gaps → High Support Overhead
+### 4.4 Theme: Documentation & Developer Self-Service Gaps → High Support Overhead
 *Affects: Developers (Frontend Developers, Application Developers) Building with APIs*
 
 **What Developers Say:**
@@ -478,7 +471,7 @@ Daimler Truck explicitly noted this: docs improvements have *"direct ROI in cust
 
 ---
 
-### 4.6 Theme: Product Stability Concerns at Scale → Trust Undermined
+### 4.5 Theme: Product Stability Concerns at Scale → Trust Undermined
 *Affects: All Personas (Integrators/Operators managing infrastructure, Developers using APIs, End Users experiencing performance)*
 
 **What We're Hearing:**
@@ -515,7 +508,7 @@ Porsche's constraint that they can "only use sub-assemblies, not full vehicle mo
 
 ---
 
-### 4.7 Theme: Roles & Permissions Too Generic → Blocks External Collaboration
+### 4.6 Theme: Roles & Permissions Too Generic → Blocks External Collaboration
 *Affects: Integrators/Operators (configuring access controls) + All Personas (limited by generic permissions)*
 
 **What We're Hearing:**

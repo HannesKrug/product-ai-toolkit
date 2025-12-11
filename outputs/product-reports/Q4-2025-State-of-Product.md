@@ -267,7 +267,7 @@ This includes enterprise customers and partners. Note: Some partners are schedul
 
 | Location | Likely Customer |
 |----------|----------------|
-| **Stuttgart area (Germany)** | Mercedes Benz development teams |
+| **Stuttgart area (Germany)** | Mercedes Benz, Porsche development teams |
 | **Portugal (Porto, Lisboa)** | BMW development team |
 
 **Interpretation:**
@@ -295,14 +295,13 @@ Documentation engagement reveals a **maintenance mode, not growth mode** pattern
 
 *What we're hearing from comprehensive Internal and Customer Advisory Board sessions (Sales, Presales, Customer Success, Professional Services, Key Accounts + BMW, Mercedes Benz, Porsche, Daimler Truck, Hella external customers).*
 
-We identify the following themes: 
+We identify the following themes:
 4.1 Theme: Integration & Deployment Complexity Blocking Onboarding
 4.2 Theme: Native CAD Data Fidelity Issues → Visualization Not Trusted
-4.3 Theme: Missing Core Viewer Features → End Users Stick With Legacy Tools
-4.4 Theme: Collision/Clash Detection Repeatedly Requested, Missing
-4.5 Theme: Documentation & Developer Self-Service Gaps → High Support Overhead
-4.6 Theme: Product Stability Concerns at Scale → Trust Undermined
-4.7 Theme: Roles & Permissions Too Generic → Blocks External Collaboration
+4.3 Theme: Missing Core Viewer Features → End Users Stick With Legacy Tools 
+4.4 Theme: Documentation & Developer Self-Service Gaps → High Support Overhead
+4.5 Theme: Product Stability Concerns at Scale → Trust Undermined
+4.6 Theme: Roles & Permissions Too Generic → Blocks External Collaboration
 
 
 ### 4.1 Theme: Integration & Deployment Complexity Blocking Onboarding
